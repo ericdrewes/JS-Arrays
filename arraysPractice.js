@@ -5,6 +5,9 @@ var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
 
   //Code Here
+function first(arr) {
+  return arr[0];
+}
 
 
 //Next problem
@@ -14,6 +17,9 @@ var arr = [10,20,30];
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
 
+function last(arr) {
+  return arr[2];
+}
 
   //Code Here
 
@@ -25,6 +31,13 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
   //Code Here
+  function looper(family) {
+    for (i=0; i < family.length; i++) {
+      alert(family[i])
+    }
+    console.log(family)
+  }
+  // looper()
 
 
 //Next problem
@@ -35,8 +48,13 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
   //Code Here
-
-
+function reversedLooper(letters) {
+  for (i = letters.length - 1; i >=0; i--){
+    alert(letters[i])
+    console.log(letters[i])
+  }
+}
+reversedLooper(letters)
 //Next Problem
 
 
@@ -45,10 +63,19 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 
+function evenFinder(nums) {
+  for(i = 0; i < nums.length; i++){
+    if(nums[i] % 2 !== 0){
+      delete nums[i];
+    }
+  }
+  return nums;
+}
+evenFinder(nums);
 
 
 
-  
+
 
 
 
@@ -74,6 +101,21 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
   //Code Here
 
+  function divider(numbersArray){
+  let evenOddNums = [[],[]]
+  for (var i = 0; i < numbersArray.length; i++){
+    if (numbersArray[i] % 2 === 0){
+      evenOddNums[0].push(numbersArray[i])
+    }
+    else {
+      evenOddNums[1].push(numbersArray[i])
+    }
+  }
+return evenOddNums;
+}
+divider(numbersArray)
+
+
 
 //Next Problem
 
@@ -86,10 +128,22 @@ var getRandomArbitrary = function() {
 
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
-  //Code Here
 
+function finder(arr){
+  var rando = getRandomArbitrary();
+  console.log("rando",rando);
+///////////  boolean(arr){}  How do insert a boolean function???? ////////////
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] == getRandomArbitrary()){
+      return true;
+    } else {
+      console.log("rando", arr[i]);
+       return false;
+    }
+  }
+}
 
-
+finder(numbers);
 
 //Next Problem
 
@@ -112,9 +166,29 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
-//removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+
+
+removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+
+function removeItem(myGroceryList, item){
+  for(var i = 0; i < myGroceryList.length; i++){
+    if(myGroceryList[i]===item){
+      myGroceryList.splice(myGroceryList[i], 1);
+    }
+  }
+  return myGroceryList;
+}
+
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
+// function addItem(myGroceryList, 'Jerky'){
+//   var addToList = myGroceryList.indexOf(item);
+//   if(my[GroceryListaddToList] !== item){
+//     myGroceryList.push(item);
+//   }
+//   return myGroceryList;
+// }
+// addItem(myGroceryList, 'Jerky'))
 
 
 //Next Problem
@@ -125,7 +199,14 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   //Code Here
 
-
+function maker(n) {
+  var arr = []
+  for(var i = 0; i <= n; i++){
+    arr.push(i)
+  }
+  return arr
+}
+maker(215)
 
 //Next Problem
 
@@ -136,6 +217,17 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 
   //Code Here
 
+  function addTen(arr){
+    for(var i = 0; i < arr.length; i++){
+      arr[i] = parseInt(arr[i]);
+    }
+    numbers.forEach(function(val, i, arr){
+      arr[i] = val + 10;
+    });
+    return arr;
+  }
+
+addTen([15, 19, 26, 29, 35, 44, 58]);
 
 
 //Next Problem
