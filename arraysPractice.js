@@ -265,17 +265,30 @@ varLongestArr = longer(arr1, arr2);
 // */
 //
 //   //Code Here
-var arr3 = [];
-
-  function both(arr1, arr2) {
-    var arr3 = arr1.concat(arr2);
-    arr3.filter(function(val, arr) {
-      return arr3.indexOf(val) == pos;
-        });
-     return arr3;
+// var arr3 = [];
+//
+//   function both(arr1, arr2) {
+//     var arr3 = arr1.concat(arr2);
+//     arr3.filter(function(val, arr) {
+//       return arr3.indexOf(val) == pos;
+//         });
+//      return arr3;
+//     }
+//
+//
+function both(arr1, arr2){
+  var newArray = [];
+  for(var i = 0; i < arr1.length; i++){
+    for(var j = 0; j < arr2.length; j++){
+      if(arr1[i] == arr2[j]){
+        newArray.push(arr1[i]);
+      }
     }
+  }
+  return newArray;
+}
 
-both(arr3)
+both(arr1, arr2);
 
 
 //
@@ -318,12 +331,13 @@ both(arr3)
 //   //Code Here
 var devMountainEmployees = [];
 
-    devMountainEmployees.push(tyler);
+    devMountainEmployees.push('tyler');
     devMountainEmployees.push(cahlan);
     devMountainEmployees.push(ryan);
     devMountainEmployees.push(colt);
 
     console.log(devMountainEmployees);
+
 
 //
 // /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
@@ -332,8 +346,8 @@ var devMountainEmployees = [];
 //   //Code Here
 //
     for( var i = 0; i < devMountainEmployees.length; i++) {
-      if( devMountainEmployees[i] === cahlan){
-        devMountainEmployees.splice(i, 1);
+      if( devMountainEmployees[i] === 'cahlan'){
+        devMountainEmployees.splice(devMountainEmployees[i], 1);
         console.log(devMountainEmployees[i]);
       }
     }
@@ -349,12 +363,6 @@ var devMountainEmployees = [];
 //
 //   //Code Here
 
-        var user = [];
-
-
-
-
-//
 // /*Now add three user objects to your users array. Each user object should contain the
 // following properties. name, email, password, username.*/
 //
@@ -368,27 +376,29 @@ var devMountainEmployees = [];
 //
 // //Your Code Here
 
-        var user1 = {
-            name: name,
-            email: email,
-            password: password,
-            username: username
-        }
-
-        var user2 = {
-          name: name,
-          email: email,
-          password: password,
-          username: username
-        }
-
-        var user3 = {
-          name: name,
-          email: email,
-          password: password,
-          username: username
-        }
+// var users = [];
 //
+//         var user1 = {
+//             name: 'Tyler McGinnis',
+//             email: 'tylermcginnis33@gmail.com',
+//             password: 'iLoveJavaScript',
+//             username: 'infiniateLoop'
+//         };
+//
+//         var user2 {
+//           name: 'Eric Drewes',
+//           email:'eric.d.drewes@gmail.com',
+//           password: 'schooliscool'
+//           username: 'cubsFan'
+//         };
+//
+//         var user3 {
+//           name: 'Fred Flinstone'
+//           email: 'Fred.Filnstone@bedrock.com'
+//           password: 'ilikerocks'
+//           username: 'rockBed'
+//         };
+// //
 // /*Now you have a very common data structure. Twitter is a good use case.
 // It's easy to imagine that your followers list on Twitter is an Array full or objects
 // and those objects contain properties about the specific person you follow.*/
@@ -401,7 +411,8 @@ var devMountainEmployees = [];
 var user = [];
 
           for(var i = 0; i < user.length; i++){
-            if(user[i].name === 'Tyler McGinnis')
-              user.splic(i, 1)
+            if(user[i].name === 'Tyler'){
+              user.splice(user[i], 1)
+            }
           }
 // //The activity we just did is very much how data works in 'the real world'.
