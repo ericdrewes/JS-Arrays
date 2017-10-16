@@ -120,20 +120,20 @@ divider(numbersArray)
 // //Next Problem
 //
 //
-// var getRandomArbitrary = function() {
-//   return Math.floor(Math.random() * 30);
-// };
-// // var numbers = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
+function getRandomArbitrary() {
+  return Math.floor(Math.random() * (30 - 0) + 0);
+};
+var arr = [0,3,4,5,6,7,9,14,17,24,25,26,29,30];
 // //Above you're given a function that will return a random number between 0 and 30.  There is also a commented out array full of numbers to help you visualize what your function will be receiving.
 //
 // // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 //
 
 function finder(arr){
-  var rando = getRandomArbitrary();
+  var random = getRandomArbitrary();
 
   for(var i = 0; i <= arr.length - 1; i++) {
-    if(arr[i] === rando) {
+    if(arr[i] === random) {
       return true;
     }
   }
@@ -146,7 +146,7 @@ function finder(arr){
 // //Next Problem
 //
 //
-// var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 // /*
 //   Here we're going to write a function that mimics going shopping and checking things off of our grocery list,
 //   and adding new items to our list.
@@ -159,7 +159,7 @@ function finder(arr){
 //   and the second is an item to add to your grocery list. In addItem add the item you passed in to
 //   myGroceryList then return the new, updated grocery list.
 //
-//   In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
+//   In both the removeItem function and the addItem function, you will also need to check for valid params. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
 // */
 //
 //   //Code Here
@@ -177,18 +177,17 @@ function removeItem(myGroceryList, item){
   return myGroceryList;
 }
 //
-addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+// var groceryList = ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 function addItem(myGroceryList, item){
-  for( var i = 0; i < myGroceryList.length; i++) {
-    if(my[GroceryListaddToList] !== item){
-      myGroceryList.push(myGroceryList[i]);
-    }
-  // var addToList = myGroceryList.indexOf(item);
+  if(item){
+    myGroceryList.push(item);
+    return myGroceryList;
   }
-  return myGroceryList;
+  return [];
 }
-addItem('Jerky');
+
+// addItem('Jerky');
 // addItem(myGroceryList, 'Jerky'))
 //
 //
@@ -200,14 +199,14 @@ addItem('Jerky');
 //
 //   //Code Here
 //
-function maker(nums) {
+function maker() {
   var arr = []
-  for(var i = 0; i < nums.length; i++){
+  for(var i = 1; i <= 215; i++){
     arr.push(i)
   }
-  return nums
+  return arr;
 }
-maker(i)
+
 //
 // //Next Problem
 //
@@ -218,17 +217,13 @@ maker(i)
 //
 //   //Code Here
 //
-  function addTen(arr){
-    for(var i = 0; i < arr.length; i++){
-      arr[i] = parseInt(arr[i]);
-    }
-    numbers.forEach(function(val, i, arr){
-      arr[i] = val + 10;
-    });
-    return arr[i];
+function addTen(arr){
+  for(var i = 0; i < arr.length; i++){
+    arr[i] = parseInt(arr[i], 10) + 10;
   }
+    return arr;
+}
 
-addTen([15, 19, 26, 29, 35, 44, 58]);
 //
 //
 // //Next Problem
