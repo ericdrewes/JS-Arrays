@@ -2,16 +2,18 @@
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
   function first(arr){
-    var firstItem = arr.shift();
+    var firstItem = arr.shift(); // The shift method removes the element at the zeroeth index and shifts the values at consecutive indexes down, then returns the removed value
     return firstItem;
   }
+
 //Next problem
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
   function last(arr) {
-    var lastItem = arr.pop();
+    var lastItem = arr.pop(); // The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
     return lastItem;
   }
+
 //Next Problem
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
